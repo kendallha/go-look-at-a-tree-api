@@ -23,7 +23,7 @@ app.get('/trees', (req, res) => {
 
 //post a new tree
 app.post('/trees', (req, res) => {
-  db.createTree(req.body)
+  db.postTree(req.body)
   .then(response => {
     res.status(200).send(response);
   })
