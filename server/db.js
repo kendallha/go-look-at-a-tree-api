@@ -8,4 +8,25 @@ const pool = new Pool ({
   database: 'treedata'
 });
 
-module.exports = pool;
+const getTrees = () => {
+  return new Promise((resolve, reject) => {
+    pool.query('SELECT * FROM treedata ORDER BY id ASC', (error, results) => {
+      if (error) {
+        reject(error)
+      }
+      resolve(results.rows)
+    })
+  })
+}
+
+const postTree = (body) => {
+  return new Promise((resolve, reject) => {
+    const { name, scientific_name, region, average_height, lifespan, fact, image } = body
+    pool.query('INSERT INTO treedata (name, scientific_name, region, average_height, lifespan, fact, image) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *', [name, scientific_name, region, average_height, lifespan, fact, image], (error, results) => {
+      if (error) {
+        reject(error)
+      }
+      resolve((`A new tree has been added added: ${JSON.stringify(results.rows[0])}`)
+    })
+  })
+}
