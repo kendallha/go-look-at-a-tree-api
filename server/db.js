@@ -30,3 +30,5 @@ const postTree = (body) => {
     })
   })
 }
+
+module.exports = { getTrees, postTree }
