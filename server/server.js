@@ -26,6 +26,23 @@ app.get('/api/v1/trees', async (request, response) => {
   }
 });
 
+app.post('/api/v1/trees', async (request, response) => {
+  const { name, scientific_name } = request.body;
+  const tree = request.body;
+
+  if (!name) {
+    response.status(422).json({error: `Missing property of name. Expected format: {name: <String>, scientific_name: <String>}`})
+  } else if (!scientific_name) {
+    response.status(422).json({error: `Missing property of scientific name. Expected format: {name: <String>, scientific_name: <String>}`})
+  } 
+  try {
+    const id = await database('trees').insert(tree, 'id');
+    response.status(201).json({ id });
+  } catch (error) {
+    response.status(500).json({ error });
+  }
+})
+
 app.listen(PORT, () => {
   console.log('Server has started on Port 5000')
 });
