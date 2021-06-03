@@ -1,4 +1,4 @@
-const treeData = require('../../../treeData');
+const treeData = require('../../../tree-data');
 
 const createTree = async (knex, tree) => {
   const treeId = await knex('trees').insert({
