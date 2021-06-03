@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const environment = process.env.NODE_ENV || 'development';
 const configuration = require('../knexfile')[environment];
 const database = require('knex')(configuration);
-const PORT = 5000; 
+const port = process.env.PORT || 5000; 
 
 app.use(express.json());
 app.use(cors());
@@ -60,6 +60,6 @@ app.get('/', (request, response) => {
   response.json({ test: `Server is waiting to GET some info!` })
 });
 
-app.listen(PORT, () => {
+app.listen(port, () => {
   console.log('Server has started on Port 5000')
 });
