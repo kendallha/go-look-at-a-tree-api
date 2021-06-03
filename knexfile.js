@@ -16,11 +16,16 @@ module.exports = {
   production: {
     client: 'pg',
     connection: process.env.DATABASE_URL,
+    pool: {
+      min: 2,
+      max: 10
+    },
     migrations: {
-        directory: __dirname + '/db/migrations',
+      tablename: 'knex_migrations',
+      directory: './db/migrations'
     },
     seeds: {
-        directory: __dirname + '/db/seeds/',
+      directory: './db/seeds/'
     },
     useNullAsDefault: true
   } 
