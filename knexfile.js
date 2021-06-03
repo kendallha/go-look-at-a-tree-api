@@ -4,11 +4,7 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection: {
-      user: 'postgres',
-      password: 'bluefish11',
-      filename: 'postgres://localhost/treedata',
-    },
+    connection: 'postgres://localhost/treedata',
     migrations: {
       directory: './db/migrations'
     },
