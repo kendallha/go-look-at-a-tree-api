@@ -54,7 +54,11 @@ app.delete('/api/v1/trees/:id', async (request, response) => {
   } catch (error) {
     response.status(500).json(error.message);
   }
-})
+});
+
+app.get('/', (request, response) => {
+  response.json({ test: `Server is waiting to GET some info!` })
+});
 
 app.listen(PORT, () => {
   console.log('Server has started on Port 5000')

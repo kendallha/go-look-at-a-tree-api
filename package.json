@@ -9,6 +9,7 @@
     "pg": "^8.6.0"
   },
   "scripts": {
+    "start": "node server/server.js",
     "devstart": "nodemon server/server.js"
   }
 }
