@@ -8,11 +8,14 @@ module.exports = {
       user: 'postgres',
       password: 'bluefish11',
       filename: 'postgres://localhost/treedata',
-      useNullAsDefault: true
     },
     migrations: {
       directory: './db/migrations'
-    }
+    },
+    seeds: {
+      directory: './db/seeds/dev'
+    },
+    useNullAsDefault: true
   }
 
   // staging: {
