@@ -12,7 +12,7 @@ const createTree = async (knex, tree) => {
   }, 'id');
 }
 
-exports.seed = function(knex) {
+exports.seed = async function(knex) {
   try {
     await knex('trees').del()
 

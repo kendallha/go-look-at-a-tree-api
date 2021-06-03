@@ -147,7 +147,7 @@ let treeData = [{
   lifespan: "150",
   fact: "In the summer, the bark of the rainbow eucalyptus peels to reveal a multi-colored trunk.",
   image: "https://i.pinimg.com/originals/72/6e/be/726ebe2da77ad6650fd56da5c605d818.jpg"
-},
+}
 ]
 ​
-export default treeData;
+module.exports = treeData;
