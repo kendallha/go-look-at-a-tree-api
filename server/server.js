@@ -41,6 +41,19 @@ app.post('/api/v1/trees', async (request, response) => {
   } catch (error) {
     response.status(500).json({ error });
   }
+});
+
+app.delete('/api/v1/trees/:id', async (request, response) => {
+  const { id } = request.params;
+  try {
+  const deletedRecord = await database('trees').where({ id }).del();
+  if (!deletedRecord) {
+    response.status(404).json({error: `Tree not found.`});
+  }
+  response.status(201).json(`${deletedRecord} tree(s) deleted.`);
+  } catch (error) {
+    response.status(500).json(error.message);
+  }
 })
 
 app.listen(PORT, () => {
