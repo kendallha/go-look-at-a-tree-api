@@ -68,7 +68,7 @@ If connecting to the API on your local machine, follow these steps:
 ## Contributors
 <table>
     <tr>
-        <td><a href="https://github.com/errabun">Riley Martin</td>
+        <td><a href="https://github.com/RMartin0717">Riley Martin</td>
          <td><a href="https://github.com/zachjjohns">Zach Johnson</td>
         <td><a href="https://github.com/kendallha">Kendall Haworth</td>
     </tr>
