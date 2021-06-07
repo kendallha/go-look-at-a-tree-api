@@ -2,8 +2,7 @@
 
 ## Table of Contents
 * [Description](#description)
-* [Installation](#installation)
-* [API Documentation](#walkthrough)
+* [API Documentation](#api-documentation)
 * [Contributors](#contributors)
 * [Technologies](#technologies)
 
@@ -14,23 +13,9 @@
  - Our Turing instructors often encourage us to take a break from learning to code and "go look at a tree" to decompress, so we decided to honor that advice *while* learning to code. 
 
 ### [API Deploy Link](https://go-look-at-a-tree-api.herokuapp.com/api/v1/trees)
- ### [Site Deploy Link](http://errm-rancid-tomatillos.surge.sh/)
+ ### [Site Deploy Link](http://golookatatree.surge.sh/)
 ### [Backend Repo](https://github.com/kendallha/go-look-at-a-tree-api)
 ### [Frontend Repo](https://github.com/kendallha/go-look-at-a-tree)
-
-## Installation
-If connecting to the API on your local machine, follow these steps:
-1. Clone down this [repo](https://github.com/kendallha/go-look-at-a-tree-api)
-2. `cd` into project directory
-3. Run `npm i` to install all project dependencies
-4. Install [PostgreSQL](https://www.postgresql.org/download/)
-5. In `psql`, run `CREATE DATABASE treedata`
-6. In your terminal run the following commands
-    - `knex migrate:latest`
-    - `knex seed:run`
-7. In postgres, you should see a database named `treedata`, with a table `trees` with data seeded. 
-8. Run `nodemon server/server.js` to connect to the express server.
-
 
 ## API Documentation
   <table>
