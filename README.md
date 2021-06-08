@@ -50,6 +50,11 @@
 
   </table>
 
+## Learning Goals
+
+- Learn a completely new technology- in our case how to build a backend using PostgreSQL, Knex, Express, and Node.js.
+- Better understand our learning styles and how we can improve our ability to learn technologies independently.
+
 ## Contributors
 <table>
     <tr>
